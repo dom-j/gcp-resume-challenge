@@ -2,6 +2,8 @@ steps:
 # Step 1: Checkout the code from GitHub 
  - name: 'gcr.io/cloud-builders/git' 
    args: ['clone','https://github.com/dom-j/gcp-resume-challenge.git','resume-frontend',]
+   env:
+    - 'CLOUDSDK_COMPUTE_REGION=europe-west2'
     
 # Step 2: Install dependencies and build your frontend
  - name: 'gcr.io/cloud-builders/npm'
@@ -25,4 +27,6 @@ steps:
 
  - name: 'gcr.io/cloud-builders/gsutil'
    args: ['cp', '-r','resume-frontend/gcp-resume-challenge/resume','gs://website-by-dom-j',]
+   env:
+    - 'CLOUDSDK_COMPUTE_REGION=europe-west2'
 

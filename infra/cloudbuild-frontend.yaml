@@ -9,15 +9,13 @@ steps:
 
 # Test
  - name: 'gcr.io/cloud-builders/npm'
-  args: ['run','test:unit',]
+   args: ['run','test:unit',]
 
 # Build
-- name: ['gcr.io/cloud-builders/npm']
-  args: ['run','build',]
+ - name: ['gcr.io/cloud-builders/npm']
+   args: ['run','build',]
 
 #Deploy to Cloud Storage
 
-- name: ['gcr.io/cloud-builders/gsutil']
-  args: ['cp', '-r','resume-frontend/gcp-resume-challenge/resume','gs://website-by-dom-j',]
-
-# JUst testing
+ - name: ['gcr.io/cloud-builders/gsutil']
+   args: ['cp', '-r','resume-frontend/gcp-resume-challenge/resume','gs://website-by-dom-j',]

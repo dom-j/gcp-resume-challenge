@@ -41,8 +41,7 @@ To use this project you will need the following
 
 * Style the Resume better
 * Frontend Code/CI/CD
-  * Push my project to my GItHub repo
-  * Use Cloud Build to republish frontend whenever the code changes
+  * Fix the Cloud Build trigger issue for the frontend
   * Invalidate Cloud CDN cache on redeploy
 
 

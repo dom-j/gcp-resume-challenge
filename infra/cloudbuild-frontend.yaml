@@ -1,21 +1,21 @@
 steps:
 # Step 1: Checkout the code from GitHub 
  - name: 'gcr.io/cloud-builders/git' 
-   args: ['clone','https://github.com/dom-j/gcp-resume-challenge.git','resume-frontend']
+   args: ['clone','https://github.com/dom-j/gcp-resume-challenge.git','resume-frontend',]
     
 # Step 2: Install dependencies and build your frontend
  - name: 'gcr.io/cloud-builders/npm'
-   args: ['install']
+   args: ['install',]
 
 # Test
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['run','test:unit']
+ - name: 'gcr.io/cloud-builders/npm'
+  args: ['run','test:unit',]
 
 # Build
 - name: ['gcr.io/cloud-builders/npm']
-  args: ['run','build']
+  args: ['run','build',]
 
 #Deploy to Cloud Storage
 
 - name: ['gcr.io/cloud-builders/gsutil']
-  args: ['cp', '-r','resume-frontend/gcp-resume-challenge/resume','gs://website-by-dom-j']
+  args: ['cp', '-r','resume-frontend/gcp-resume-challenge/resume','gs://website-by-dom-j',]

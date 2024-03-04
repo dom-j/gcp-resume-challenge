@@ -26,7 +26,7 @@ steps:
 #Deploy to Cloud Storage
 
  - name: 'gcr.io/cloud-builders/gsutil'
-   args: ['cp', '-r','./gcp-resume-challenge/resume','gs://website-by-dom-j',]
+   args: ['cp', '-r','dom-j/gcp-resume-challenge/resume','gs://website-by-dom-j',]
    env:
     - 'CLOUDSDK_COMPUTE_REGION=europe-west1'
 

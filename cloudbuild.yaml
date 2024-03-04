@@ -6,22 +6,22 @@ steps:
     - 'CLOUDSDK_COMPUTE_REGION=europe-west1'
     
 # Step 2: Install dependencies and build your frontend
- - name: 'gcr.io/cloud-builders/npm'
-   args: ['install',]
-   env: 
-     - 'CLOUDSDK_COMPUTE_REGION=europe-west1'
+# - name: 'gcr.io/cloud-builders/npm'
+ #  args: ['install',]
+  # env: 
+  #   - 'CLOUDSDK_COMPUTE_REGION=europe-west1'
 
 # Test
- - name: 'gcr.io/cloud-builders/npm'
-   args: ['run','test:unit',]
-   env:
-    - 'CLOUDSDK_COMPUTE_REGION=europe-west1'
+ #- name: 'gcr.io/cloud-builders/npm'
+#   args: ['run','test:unit',]
+ #  env:
+ #   - 'CLOUDSDK_COMPUTE_REGION=europe-west1'
 
 # Build
- - name: 'gcr.io/cloud-builders/npm'
-   args: ['run','build',]
-   env:
-    -  'CLOUDSDK_COMPUTE_REGION=europe-west1'
+# - name: 'gcr.io/cloud-builders/npm'
+ #  args: ['run','build',]
+ #  env:
+ #   -  'CLOUDSDK_COMPUTE_REGION=europe-west1'#>
 
 #Deploy to Cloud Storage
 

@@ -1,0 +1,26 @@
+# openapi2-run.yaml
+swagger:'2.0'
+info:
+  title:myapiid123
+  description:API gateway for my website Cloud Run backend
+  version:1.0.0
+host:visitorcounter-5yorgobolq-ew.a.run.app
+
+schemes:
+- https
+produces:
+- application/json
+paths:
+  /viewcount:
+    post:
+      summary:CloudRun View count
+      operationId: viewcount
+      x-google-backend:
+        address:https://visitorcounter-5yorgobolq-ew.a.run.app
+
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type:string
+  

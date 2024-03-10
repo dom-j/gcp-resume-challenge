@@ -34,6 +34,18 @@ To use this project you will need the following
 
 * Assign the Cloud Build Editor permissions (roles/cloudbuild.builds.editor) role in your project to create triggers
 
+### Creating view count with Cloud Run and Python
+  
+  *See the article guide here <https://medium.com/@cooper.white_86633/gcp-cloud-resume-challenge-creating-a-view-count-with-cloud-run-7c1388c99cea>
+  *Activate the Firestore API - find more about what is Firestore here
+  *Create a Database in Firestore and then add Collection and Document to it which will hold the a numeric field of our view count.
+  *Create the Cloud Run endpoint - more about Cloud Run here <https://cloud.google.com/run/docs/quickstarts/build-and-deploy/deploy-python-service>
+  *I created the Python service main.py and the requirtements.txt files and deployed them to Cloud Run
+   
+   *Create the API gateway - for these you enable the services below:
+      *API Gateway API
+      *Service Management API
+      *Service Control API
 
 
 
@@ -41,8 +53,8 @@ To use this project you will need the following
 
 * Style the Resume better
 * Frontend Code/CI/CD
-  * Fix the Cloud Build trigger issue for the frontend
-  * Invalidate Cloud CDN cache on redeploy
+  *Create the API gateway <https://medium.com/@cooper.white_86633/gcp-cloud-resume-challenge-creating-an-api-gateway-and-deal-with-cors-9499becb770f>
+  *I need to troubleshoot my Cloud Run service as it is not available - but in the Console it shows healthy
 
 
 ## Questions

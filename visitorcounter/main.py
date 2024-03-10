@@ -20,17 +20,16 @@ ref =db.collection(u'WebsiteData').document('ViewingData')
 @app.route("/",methods=['POST'])
 @cross_origin()
 def view_count():
-    
     # Increment the value in our document
     ref.update({"ViewCount": firestore.Increment(1)})
 
-# Retrieve the count
-viewcount = ref.get().to_dict()['ViewCount']
+    # Retrieve the count
+    viewcount = ref.get().to_dict()['ViewCount']
 
-# Change it to a JSON format and print what we are returning for logging purpose and return it from the function
-response = jsonify({'ViewCount':viewcount})
-print("Returning:",response)
-return respone
+    # Change it to a JSON format and print what we are returning for logging purpose and return it from the function
+    response = jsonify({'ViewCount':viewcount})
+    print("Returning:",response)
+    return response
 
 if __name__ == "__main__":
-    app.run(debug=True,host="0.0.0.0",port-int(os.environ.get("PORT",8080)))
+    app.run(debug=True,host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
